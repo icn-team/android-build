@@ -1,0 +1,19 @@
+name: Docker Android hICN Dependencies
+on:
+  schedule:
+    - cron:  '0 0 1 */6 *'
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: icnteam/android-build:dep
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        registry: registry.hub.docker.com
+        dockerfile: Dockerfile_dep
+        buildargs: DOCKER_IMAGE=icnteam/android-build:env
