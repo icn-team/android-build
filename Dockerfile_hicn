@@ -13,7 +13,6 @@
 # limitations under the License.
 ##############################################################################
 
-
 ARG DOCKER_IMAGE
 
 FROM ${DOCKER_IMAGE}
