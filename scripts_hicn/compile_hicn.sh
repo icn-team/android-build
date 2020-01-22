@@ -18,7 +18,7 @@
 set -ex
 
 if [ ! -d android-sdk ]; then
-	git clone https://github.com/manang/android-sdk.git
+	git clone https://github.com/icn-team/android-sdk.git -b resilient
 fi
 cd android-sdk
 ln -s ../sdk .
