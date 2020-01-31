@@ -25,8 +25,9 @@ ln -s ../sdk .
 ln -s ../qt .
 ln -s ../usr_aarch64 .
 ln -s ../usr_i686 .
-ln -s ../.versions .
+cp ../.versions .
 ./compileHicn.sh
 make version
+cp .versions ../
 cd ..
 rm -rf android-sdk
