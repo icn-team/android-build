@@ -24,7 +24,7 @@ cd android-sdk
 ln -s ../sdk .
 ln -s ../qt .
 ln -s ../usr_aarch64 .
-ln -s ../usr_i686 .
+ln -s ../usr_x86_64 .
 cp ../.versions .
 ./compileHicn.sh
 make version
