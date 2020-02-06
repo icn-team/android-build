@@ -27,6 +27,6 @@ ln -s ../qt .
 ./compileQtDep.sh
 cd ..
 mv android-sdk/usr_aarch64 .
-mv android-sdk/usr_i686 .
+mv android-sdk/usr_x86_64 .
 mv android-sdk/.versions .
 rm -rf android-sdk
