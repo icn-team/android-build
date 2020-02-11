@@ -15,6 +15,8 @@
 
 FROM openjdk:8-jdk
 
+ARG QT_CI_LOGIN
+ARG QT_CI_PASSWORD
 MAINTAINER Angelo Mantellini <manangel@cisco.com>
 
 ENV VERBOSE=1
@@ -25,8 +27,8 @@ RUN apt-get clean
 
 RUN git clone https://github.com/icn-team/android-sdk.git -b resilient && cd android-sdk && make init_sdk \
   && echo ${{ secrets.QT_CI_LOGIN }} \
-  &&  export QT_CI_LOGIN=${{ secrets.QT_CI_LOGIN }} \
-	&& export QT_CI_PASSWORD=${{ QT_CI_PASSWORD }} \
+  && export QT_CI_LOGIN=${QT_CI_LOGIN} \
+  && export QT_CI_PASSWORD=${QT_CI_PASSWORD} \
   && make install-env \
   && rm -rf qt/qt-opensource-* \
   && rm -rf qt/qtci \
