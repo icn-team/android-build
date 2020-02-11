@@ -25,7 +25,7 @@ RUN apt-get clean
 
 RUN git clone https://github.com/icn-team/android-sdk.git -b resilient && cd android-sdk && make init_sdk \
   && echo ${{ secrets.QT_CI_LOGIN }} \
-  $$ export QT_CI_LOGIN=${{ secrets.QT_CI_LOGIN }}
+  $$ export QT_CI_LOGIN=${{ secrets.QT_CI_LOGIN }} \
   && make install-env \
   && rm -rf qt/qt-opensource-* \
   && rm -rf qt/qtci \
