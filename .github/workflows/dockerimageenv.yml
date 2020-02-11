@@ -16,4 +16,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         registry: registry.hub.docker.com
         dockerfile: Dockerfile_env
-        buildargs: QT_CI_LOGIN=${{ secrets.QT_CI_LOGIN }} QT_CI_PASSWORD=${{ secret.QT_CI_PASSWORD }}
+        buildargs: QT_CI_LOGIN=${{ secrets.QT_CI_LOGIN }} QT_CI_PASSWORD=${{ secrets.QT_CI_PASSWORD }}
