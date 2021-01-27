@@ -36,3 +36,4 @@ RUN git clone https://github.com/icn-team/android-sdk.git && cd android-sdk && m
   && mv android-sdk/sdk . \
   && mv android-sdk/qt . \
   && rm -rf android-sdk
+
